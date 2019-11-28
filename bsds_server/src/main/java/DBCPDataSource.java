@@ -6,7 +6,7 @@ public class DBCPDataSource {
   private static BasicDataSource dataSource = new BasicDataSource();
 
   // NEVER store sensitive information below in plain text!
-  private static final String HOST_NAME = "database-3.czuini4dypti.us-east-1.rds.amazonaws.com";
+  private static final String HOST_NAME = System.getenv("HOST_NAME");
   private static final String PORT = System.getenv("MySQL_PORT");
   private static final String DATABASE = "LiftRides";
   private static final String USERNAME = System.getenv("DB_USERNAME");
